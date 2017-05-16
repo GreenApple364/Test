@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8"></meta>
 <title>Echo</title>
 </head>
 <body>
-    a
+	<form action="/add" id="echoForm">
+		<input type="text" name="text" value="表示させたいテキストを入力"></input> <input type="submit"
+			value="送信"></input>
+	</form>
+	<p th:text="${text}">テキストを入力してください</p>
 </body>
 </html>
